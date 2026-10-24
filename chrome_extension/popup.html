@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      width: 350px;
+      padding: 15px;
+      font-family: Arial, sans-serif;
+    }
+    h3 {
+      margin: 0 0 15px 0;
+      color: #0066CC;
+    }
+    .score {
+      font-size: 48px;
+      font-weight: bold;
+      text-align: center;
+      margin: 20px 0;
+    }
+    .metrics {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+    .metric {
+      padding: 10px;
+      background: #f0f0f0;
+      border-radius: 5px;
+      text-align: center;
+    }
+    .metric-label {
+      font-size: 11px;
+      color: #666;
+    }
+    .metric-value {
+      font-size: 24px;
+      font-weight: bold;
+      color: #0066CC;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #0066CC;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+    button:hover {
+      background: #0052A3;
+    }
+    .loading {
+      text-align: center;
+      padding: 30px;
+    }
+    .error {
+      color: red;
+      padding: 10px;
+      background: #ffe6e6;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h3>🔍 Quick SEO Audit</h3>
+  
+  <div id="loading" class="loading">
+    <p>Analyzing page...</p>
+  </div>
+  
+  <div id="results" style="display: none;">
+    <div class="score" id="overallScore">--</div>
+    
+    <div class="metrics">
+      <div class="metric">
+        <div class="metric-label">On-Page</div>
+        <div class="metric-value" id="onpageScore">--</div>
+      </div>
+      <div class="metric">
+        <div class="metric-label">Technical</div>
+        <div class="metric-value" id="technicalScore">--</div>
+      </div>
+      <div class="metric">
+        <div class="metric-label">Content</div>
+        <div class="metric-value" id="contentScore">--</div>
+      </div>
+      <div class="metric">
+        <div class="metric-label">Mobile</div>
+        <div class="metric-value" id="mobileScore">--</div>
+      </div>
+    </div>
+    
+    <button id="fullReportBtn">View Full Report</button>
+  </div>
+  
+  <div id="error" class="error" style="display: none;"></div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>

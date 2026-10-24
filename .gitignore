@@ -1,0 +1,88 @@
+# ==============================================================================
+# Environment & Secrets (NEVER COMMIT)
+# ==============================================================================
+.env
+.env.local
+.env.*.local
+.env.backup
+!.env.example
+
+# ==============================================================================
+# Python Runtime & Build Artifacts
+# ==============================================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# ==============================================================================
+# Virtual Environments
+# ==============================================================================
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+
+# ==============================================================================
+# Databases, Caches & Run-time State
+# ==============================================================================
+*.db
+*.sqlite
+*.sqlite3
+data/
+audits_history/
+.cache/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ==============================================================================
+# Development Scratch & Local Dumps
+# ==============================================================================
+*.log
+raw_google_dump.json
+test_results.txt
+agent.txt
+web_app.txt
+debug_path.py
+debug_serp.py
+fix_path.py
+inspect_dump.py
+save_raw_json.py
+
+# ==============================================================================
+# Streamlit & UI Cache
+# ==============================================================================
+.streamlit/secrets.toml
+
+# ==============================================================================
+# IDEs & System Files
+# ==============================================================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
